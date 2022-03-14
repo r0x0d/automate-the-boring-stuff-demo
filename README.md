@@ -1,6 +1,5 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/r0x0d/automate-the-boring-stuff-demo/main.svg)](https://results.pre-commit.ci/latest/github/r0x0d/automate-the-boring-stuff-demo/main)
 [![Coverage](https://github.com/r0x0d/automate-the-boring-stuff-demo/actions/workflows/coverage.yml/badge.svg)](https://github.com/r0x0d/automate-the-boring-stuff-demo/actions/workflows/coverage.yml)
-[![Code Scanning - Action](https://github.com/r0x0d/automate-the-boring-stuff-demo/actions/workflows/codeql.yml/badge.svg)](https://github.com/r0x0d/automate-the-boring-stuff-demo/actions/workflows/codeql.yml)
 
 # Automate the Boring Stuff Demo
 
