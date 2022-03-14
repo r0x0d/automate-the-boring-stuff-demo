@@ -1,0 +1,50 @@
+# This is the name of the workflow, what will be shown in the GitHub Actions when a PR/Commit is running
+name: Tests
+
+# Documentation with the possiblities for an event trigger:
+# https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: "Ubuntu - Python 3.10"
+
+    # Possible values are listed here:
+    # https://github.com/actions/virtual-environments#available-environments
+    runs-on: ubuntu-latest
+
+    # Steps can be seen as the definition of the workflow, here we can define whatever we want that will be run
+    # inside the machines, this includes:
+    #   * Other users actions
+    #   * Custom actions
+    steps:
+      # Link for the checkout action:
+      # https://github.com/actions/checkout
+      - name: Checkout sources
+        uses: actions/checkout@v3
+
+      # Link for the cache action:
+      # https://github.com/actions/cache
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip # Path to the pip cache folder
+          key: pip-ubuntu-python-3.10 # The key that will be used to cache/restore pip
+
+      # Link for the setup-python action:
+      # https://github.com/actions/setup-python
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.10" # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: "x64" # optional x64 or x86. Defaults to x64 if not specified
+
+      # Custom steps that we can pass any commands to run inside the machines
+      - name: Install tox
+        run: |
+          pip install tox
+
+      - name: Run tests
+        run: |
+          tox -e py310
