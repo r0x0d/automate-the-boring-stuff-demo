@@ -7,4 +7,4 @@ Demo repository using GitHub Actions and pre-commit.ci to demonstrate how to aut
 
 ## What is this all about?
 
-This repository is part of the demo session from my talk [Automating the boring stuff](https://r0x0d.github.io/talks/slides/automating-the-boring-stuff) gave at Red Hat in the Learn Python initiative.
+This repository is part of the demo session from my talk [Automating the boring stuff](https://r0x0d.github.io/talks/slides/automate-the-boring-stuff/#/) gave at Red Hat in the Learn Python initiative.
