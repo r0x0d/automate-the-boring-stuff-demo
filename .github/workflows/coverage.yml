@@ -20,6 +20,8 @@ jobs:
     # inside the machines, this includes:
     #   * Other users actions
     #   * Custom actions
+    # If you want to check out the official actions provided by github and other companies, you can use the marketplace
+    # https://github.com/marketplace
     steps:
       # Link for the checkout action:
       # https://github.com/actions/checkout
