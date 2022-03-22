@@ -30,7 +30,7 @@ jobs:
 
       # Link for the cache action:
       # https://github.com/actions/cache
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         with:
           path: ~/.cache/pip # Path to the pip cache folder
           key: pip-ubuntu-python-3.10 # The key that will be used to cache/restore pip
